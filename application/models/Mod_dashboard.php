@@ -17,7 +17,7 @@ class Mod_dashboard extends CI_Model
         $query = "SELECT A.id_transaksi,B.nama_pelanggan,A.status
         FROM transaksi A 
         JOIN pelanggan B
-        ON A.id_pelanggan = B.id_pelanggan WHERE A.tgl_transaksi = CURRENT_DATE";
+        ON A.id = B.id WHERE A.tgl_transaksi = CURRENT_DATE";
 
         return $this->db->query($query)->result_array();
     }

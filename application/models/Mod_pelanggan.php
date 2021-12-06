@@ -15,17 +15,17 @@ class Mod_pelanggan extends CI_Model
 
     public function getpelangganbyid($id)
     {
-        return $this->db->get_where('pelanggan',['id_pelanggan'=>$id])->row_array();
+        return $this->db->get_where('pelanggan',['id'=>$id])->row_array();
     }
 
     public function updatepelanggan($data,$idpelanggan)
     {
-        $this->db->where('id_pelanggan', $idpelanggan);
+        $this->db->where('id', $idpelanggan);
         $this->db->update('pelanggan', $data);
     }
     public function hapuspelanggan($id)
     {
-        $this->db->where('id_pelanggan', $id);
+        $this->db->where('id', $id);
         $this->db->delete('pelanggan');
     }
 }

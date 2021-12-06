@@ -13,9 +13,9 @@ class Admin extends CI_Controller {
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $data['title'] = "Dashboard";
         $data['laundrymasuk'] = $this->dashboard->gettransaksi();
-        $data['laundryselesai'] = $this->dashboard->gettransaksiselesai();
-        $data['transaksi'] = $this->dashboard->gettransaksiupdate();
-        $data['totrans'] = $this->dashboard->gettotaltrans();
+        // $data['laundryselesai'] = $this->dashboard->gettransaksiselesai();
+        // $data['transaksi'] = $this->dashboard->gettransaksiupdate();
+        // $data['totrans'] = $this->dashboard->gettotaltrans();
         $data['transhari'] = $this->dashboard->gettranshari();
         $this->load->view('templates/header',$data);
         $this->load->view('templates/sidebar');
